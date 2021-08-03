@@ -4,18 +4,20 @@ public class Bob {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Type here: ");
-        String input = scanner.next();
+        String input = scanner.nextLine().trim();
         if (input.endsWith("?")) {
             System.out.println("Sure");
         }
 
 
-        if (input.endsWith("!")) {
+        else if (input.endsWith("!")) {
             System.out.println("Whoa, chill out!");
         }
 
-        if (input.equals("") || input.equals(" ")) {
+        else if (input.isEmpty()) {
             System.out.println("Fine. Be that way!");
+        } else {
+            System.out.println("Whatever.");
         }
 
     }
