@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
 
 //    int i = 5;
 //
@@ -15,30 +15,30 @@ public class ControlFlowExercises {
 //    int counter = 0;
 //
 //    do {
-//        System.out.println(counter);
-//        counter += 2;
-//        counter = counter + 2;
-//    }while (counter <= 100);
+//        System.out.println(counting);
+//        counting += 2;
+//        counting = counting + 2;
+//    }while (counting <= 100);
 
-//      int backwardsCounter = 100;
+//      int backwardsCounting = 100;
 //
 //      do {
-//          System.out.println(backwardsCounter);
-//          backwardsCounter -= 5;
+//          System.out.println(backwardsCounting);
+//          backwardsCounting -= 5;
 //
-//      }while (backwardsCounter >= -10);
+//      }while (backwardsCounting >= -10);
 
 //        for (int i = 100; i >= -10; i -= 5) {
 //            System.out.println(i);
 //        }
 
-//        long twoCounter = 2L;
+//        long twoCounting = 2L;
 //
 //        do {
-//            System.out.println(twoCounter);
-//            twoCounter *= twoCounter;
-//            twoCounter = twoCounter * twoCounter;
-//        }while (twoCounter < 1000000L);
+//            System.out.println(twoCounting);
+//            twoCounter *= twoCounting;
+//            twoCounter = twoCounting * twoCounting;
+//        }while (twoCounting < 1000000L);
 
 //        for (long i = 2L; i < 1000000L; i *= i){
 //            System.out.println(i);
@@ -47,7 +47,7 @@ public class ControlFlowExercises {
 
 //        for (int i = 1; i <= 100; i++){
 //            if (i % 5 == 0 && i % 3 == 0){
-//                System.out.println("FizzBuzz");
+//                System.out.println("fizzbuzz");
 //            } else if (i % 5 == 0) {
 //                System.out.println("Buzz");
 //            } else if (i % 3 == 0) {
@@ -59,7 +59,6 @@ public class ControlFlowExercises {
 //        }
 
 
-        Scanner scanner = new Scanner(System.in);
 //
 //        boolean userContinues = true;
 //
@@ -75,8 +74,8 @@ public class ControlFlowExercises {
 //                System.out.printf("%-7d", i * i);
 //                System.out.print(" | ");
 //                System.out.print(i * i * i);
-//                //Docrob alternate table display
-////                System.out.printf("%-6d | %-7d | %-5d\n", i, i*i, i*i*i);
+//
+//             System.out.printf("%-6d | %-7d | %-5d\n", i, i*i, i*i*i);
 //                System.out.println();
 //            }
 //            System.out.println("Would you like to enter another number (y/n)?");
@@ -89,7 +88,7 @@ public class ControlFlowExercises {
 //        }while(userContinues);
 
 
-        boolean anotherGrade = true;
+        boolean grade = true;
 
         do {
             System.out.println("Please enter a numerical grade from 0 - 100");
@@ -114,11 +113,11 @@ public class ControlFlowExercises {
 
 
             if (!userResponse.equalsIgnoreCase("y")){
-                anotherGrade = false;
+                grade = false;
             }
 
 
-        }while (anotherGrade);
+        }while (grade);
 
 
 
