@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class MethodsExercises {
 
@@ -81,9 +82,36 @@ public static void factorial(){
       System.out.printf("= %d\n", factorialSum(i));
     }
 }
-    public static void main(String[] args) {
-        factorial();
+//    public static void main(String[] args) {
+//        factorial();
+//    }
+
+
+    public static int randomNumbers(int min, int max){
+        return (int) ((Math.random() * (max- min)) + min);
     }
+
+public static void dice(){
+    Scanner input = new Scanner(System.in);
+        System.out.println("How many sides does the dice have?");
+        int sides = getInteger(2, 20);
+
+        int firstRoll = randomNumbers(1, sides);
+        int secondRoll = randomNumbers(1, sides);
+
+    System.out.printf(" first Die ==> %d\nsecond die ===> %d\n",firstRoll,secondRoll);
+    System.out.println("Would you like to continue?");
+    String userResponse = input.nextLine();
+    boolean doesUser = userResponse.toLowerCase().contains("y");
+
+    if (doesUser){
+        dice();
+    }
+
+}
+//    public static void main(String[] args) {
+//    dice();
+//    }
 
 
 
