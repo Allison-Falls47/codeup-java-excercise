@@ -45,10 +45,45 @@ public class MethodsExercises {
      }
     }
 
-    public static void main(String[] args) {
-        System.out.println(getInteger(1, 10));
+//    public static void main(String[] args) {
+//        System.out.println(getInteger(1, 10));
+//    }
+
+    public static String factorialString(int number){
+        String returnString = "";
+        for (int i = 1; i <= number; i++){
+            if (i == number){
+                returnString +=i;
+            }else{
+                returnString += i + " x ";
+            }
+        }
+
+        return returnString;
     }
 
+    public static int factorialSum(int number){
+
+        int sum = 1;
+
+        for (int i = 2; i <= number; i++){
+            sum *= i;
+        }
+        return sum;
+    }
+
+public static void factorial(){
+  int factorialN = getInteger(1, 10);
+
+  for (int i = 1; i <= factorialN; i++){
+      System.out.printf("%d! = ", i);
+      System.out.printf("%-18s", factorialString(i));
+      System.out.printf("= %d\n", factorialSum(i));
+    }
+}
+    public static void main(String[] args) {
+        factorial();
+    }
 
 
 
