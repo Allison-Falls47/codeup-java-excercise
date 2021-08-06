@@ -6,7 +6,7 @@ public class CircleApp {
     public static void main(String[] args) {
         Input input = new Input();
 
-        double userRadius = input.getDouble();
+        double userRadius = input.getDouble("enter prompt here");
 
         Circle circle = new Circle(userRadius);
 
