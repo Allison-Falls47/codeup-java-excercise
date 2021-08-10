@@ -28,7 +28,7 @@ public class Input {
             return getInt(min, max);
         }
         else{
-            System.out.println("Valid integer");
+//            System.out.println("Valid integer");
             return userInt;
         }
     }
