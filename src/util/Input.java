@@ -20,7 +20,7 @@ public class Input {
         return userAns.equals("y");
     }
     public int getInt(int min, int max){
-        System.out.println("Enter a integer: ");
+     //   System.out.println("Enter a integer: ");
         int userInt = scanner.nextInt();
 
         if (userInt < min || userInt > max){
