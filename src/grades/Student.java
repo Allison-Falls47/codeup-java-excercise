@@ -7,20 +7,38 @@ import java.util.HashMap;
 
 public class Student {
     private String name;
-    private final ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades;
 
-    public Student(String name, Integer grades) {
+    public Student(String name) {
         this.name = name;
-        this.grades = grades.isEmpty();
+        this.grades = new ArrayList<>();
     }
-    public static void main(String[] args) {
         // returns the student's name
-        public String getName();
+        public String getName() {
+            return name;
 
+        }
         // adds the given grade to the grades property
-        public void addGrade(int grade);
-        // returns the average of the students grades
-        public double getGradeAverage();
+        public void addGrade(int grade) {
+            this.grades.add(grade);
     }
+        // returns the average of the students grades
+        public double getGradeAverage() {
+            double sum = 0;
+            for (Integer grade : grades){
+                sum += grade;
+            }
+            return sum / this.grades.size();
+    }
+
+//    public static void main(String[] args) {
+//        Student joe = new Student("Joe");
+//        joe.addGrade(57);
+//        joe.addGrade(67);
+//        joe.addGrade(85);
+//
+//        System.out.println(joe.getGradeAverage());
+//    }
+
 }
 
