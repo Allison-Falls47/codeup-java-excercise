@@ -1,6 +1,7 @@
 package util;
 
 import java.util.Scanner;
+import java.sql.SQLOutput;
 
 public class Input {
     private Scanner scanner;
@@ -33,30 +34,46 @@ public class Input {
         }
     }
 
-    public int getInt(){
-        System.out.println("Type an integer: ");
-        int userInt = scanner.nextInt();
-        return userInt;
+    public int getInt() {
+        System.out.println("Give me an integer: ");
+        try {
+            return Integer.valueOf(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Not an integer!");
+            return getInt();
+        }
     }
 
-    public double getDouble(double min, double max){
-        System.out.println("Enter a integer: ");
-        double userDouble = scanner.nextDouble();
+    public double getDouble(double min, double max) {
+        System.out.println("Give me an decimal: ");
+        double userDouble;
 
-        if (userDouble < min || userDouble > max){
-            System.out.println("Try again!");
+        try {
+            userDouble = Double.valueOf(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("That is not a double!");
             return getDouble(min, max);
         }
-        else{
-            System.out.println("Valid decimal");
+
+        if (userDouble < min || userDouble > max) {
+            System.out.println("Try again!");
+            return getDouble(min, max);
+        } else {
+            System.out.println("Valid decimal.");
             return userDouble;
         }
     }
 
-    public double getDouble(String prompt){
-        System.out.println(prompt);
-        double userDouble = scanner.nextDouble();
-        return userDouble;
-    }
+    public double getDouble() {
+        System.out.println("Give me a decimal: ");
+        try {
+            return Double.valueOf(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("That is not a double!");
+            return getDouble();
+        }
+
+        }
+
 
 }
