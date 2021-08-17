@@ -1,7 +1,6 @@
 package util;
 
 import java.util.Scanner;
-import java.sql.SQLOutput;
 
 public class Input {
     private Scanner scanner;
@@ -76,4 +75,7 @@ public class Input {
         }
 
 
+    public double getDouble(String s) {
+        return 0;
+    }
 }
